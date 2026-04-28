@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Meu Gemini Chat</title>
+    <style>
+        body { font-family: sans-serif; display: flex; flex-direction: column; height: 90vh; }
+        #chat-log { flex: 1; overflow-y: auto; border: 1px solid #ccc; padding: 10px; }
+        #input-area { display: flex; margin-top: 10px; }
+        input { flex: 1; padding: 10px; }
+    </style>
+</head>
+<body>
+    <div id="chat-log"></div>
+    <div id="input-area">
+        <input type="text" id="user-input" placeholder="Digite sua mensagem...">
+        <button onclick="enviar()">Enviar</button>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
